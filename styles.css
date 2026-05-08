@@ -1,0 +1,300 @@
+/* ============================================
+   PORTFOLIO STYLES
+   Light mode by default, dark mode via .dark-mode
+   on the <body>. Both palettes are defined as
+   custom properties so the rest of the file is
+   theme-agnostic.
+   ============================================ */
+
+:root {
+    --bg:           #fafaf7;
+    --surface:      #ffffff;
+    --text:         #1a1a2e;
+    --text-muted:   #555570;
+    --accent:       #4f46e5;
+    --accent-hover: #4338ca;
+    --border:       #e5e5ed;
+    --shadow:       0 2px 12px rgba(0, 0, 0, 0.05);
+}
+
+body.dark-mode {
+    --bg:           #0f0f1a;
+    --surface:      #1a1a2e;
+    --text:         #f0f0f5;
+    --text-muted:   #a0a0b8;
+    --accent:       #818cf8;
+    --accent-hover: #c7d2fe;
+    --border:       #2a2a40;
+    --shadow:       0 2px 12px rgba(0, 0, 0, 0.35);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* ---- Typography ---- */
+
+h1, h2, h3 {
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0 0 0.6rem;
+}
+
+h2 {
+    font-size: 1.75rem;
+    display: inline-block;
+    border-bottom: 3px solid var(--accent);
+    padding-bottom: 0.35rem;
+    margin-bottom: 1rem;
+}
+
+p {
+    margin: 0 0 1rem;
+}
+
+a {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px dashed transparent;
+    transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+a:hover,
+a:focus-visible {
+    color: var(--accent-hover);
+    border-bottom-color: var(--accent-hover);
+}
+
+/* ---- Nav ---- */
+
+.nav {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1.25rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.nav__logo {
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-weight: 700;
+    color: var(--accent);
+    font-size: 1.05rem;
+}
+
+.nav__links {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.nav__links a {
+    color: var(--text);
+    border: none;
+    font-weight: 500;
+}
+
+.nav__links a:hover {
+    color: var(--accent);
+}
+
+#theme-toggle {
+    background: var(--surface);
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 0.4rem 0.75rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.15s ease, border-color 0.15s ease;
+}
+
+#theme-toggle:hover {
+    transform: scale(1.1);
+    border-color: var(--accent);
+}
+
+/* ---- Hero ---- */
+
+.hero {
+    border-bottom: 1px solid var(--border);
+}
+
+.hero__content {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 4rem 2rem 5rem;
+    text-align: center;
+}
+
+.hero__avatar {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    border: 4px solid var(--surface);
+    box-shadow: var(--shadow);
+    margin-bottom: 1.5rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero__name {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    margin-bottom: 0.5rem;
+}
+
+.hero__tagline {
+    font-size: 1.15rem;
+    color: var(--text-muted);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* ---- Sections ---- */
+
+.section {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.section:last-of-type {
+    border-bottom: none;
+}
+
+/* ---- Skills (flex chip layout) ---- */
+
+.skills {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+}
+
+.skills li {
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 0.4rem 1rem;
+    font-size: 0.95rem;
+    transition: transform 0.15s ease, border-color 0.15s ease;
+}
+
+.skills li:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent);
+}
+
+/* ---- Projects (grid layout) ---- */
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.project-card {
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--accent);
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
+}
+
+.project-card h3 {
+    margin-top: 0;
+}
+
+.project-card p {
+    color: var(--text-muted);
+    flex-grow: 1;
+}
+
+.project-card__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin: 0.5rem 0 1rem;
+}
+
+.project-card__tag {
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    background-color: var(--bg);
+    border-radius: 4px;
+    padding: 0.15rem 0.5rem;
+}
+
+.project-card__link {
+    font-weight: 500;
+    align-self: flex-start;
+}
+
+/* ---- Contact ---- */
+
+.contact {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    font-size: 1.05rem;
+}
+
+/* ---- Footer ---- */
+
+footer {
+    text-align: center;
+    padding: 2rem 1rem;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    border-top: 1px solid var(--border);
+}
+
+/* ---- Responsive ---- */
+
+@media (max-width: 600px) {
+    .nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem;
+    }
+    .nav__links {
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+    .hero__content {
+        padding: 2.5rem 1.25rem 3.5rem;
+    }
+    .section {
+        padding: 3rem 1.25rem;
+    }
+}

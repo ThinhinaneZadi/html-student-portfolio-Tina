@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>[Your Name] — Aspiring Developer</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header class="hero">
+        <nav class="nav">
+            <span class="nav__logo">&lt;YN /&gt;</span>
+            <div class="nav__links">
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+                <button id="theme-toggle" aria-label="Toggle light and dark mode">🌙</button>
+            </div>
+        </nav>
+
+        <div class="hero__content">
+            <img class="hero__avatar"
+                 src="avatar.svg"
+                 alt="Avatar showing the initials of [Your Name]"
+                 width="140" height="140">
+            <h1 class="hero__name">[Your Name]</h1>
+            <p class="hero__tagline">
+                Aspiring full-stack developer learning to build for the web — one commit at a time.
+            </p>
+        </div>
+    </header>
+
+    <main>
+        <section id="about" class="section">
+            <h2>About Me</h2>
+            <p>
+                Hi! I'm [Your Name], a student in the TTP cohort. I'm currently
+                deep in HTML, CSS, and JavaScript fundamentals, with React, Node, and
+                the rest of the stack on the road ahead. I like building things
+                that are simple, accessible, and a little bit playful.
+            </p>
+            <p>
+                Outside of code: <em>[your hobbies / interests / what makes you, you]</em>.
+            </p>
+        </section>
+
+        <section id="skills" class="section">
+            <h2>Skills</h2>
+            <p>Tools and technologies I've worked with so far:</p>
+            <ul class="skills">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>DOM APIs</li>
+                <li>Git &amp; GitHub</li>
+                <li>Responsive Design</li>
+                <li>VS Code</li>
+            </ul>
+        </section>
+
+        <section id="projects" class="section">
+            <h2>Projects</h2>
+            <p>A growing collection of things I've built while learning.</p>
+            <div id="projects-grid" class="projects"></div>
+        </section>
+
+        <section id="contact" class="section">
+            <h2>Contact</h2>
+            <p>The best ways to reach me:</p>
+            <ul class="contact">
+                <li>📧 <a href="mailto:you@example.com">you@example.com</a></li>
+                <li>🐙 <a href="https://github.com/yourusername" target="_blank" rel="noopener">github.com/yourusername</a></li>
+                <li>💼 <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener">linkedin.com/in/yourusername</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> [Your Name]. Built from scratch.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
