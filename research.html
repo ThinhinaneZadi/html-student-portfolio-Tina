@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Object Detection Research — Tinhinane Zadi</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header class="hero">
+        <nav class="nav">
+            <span class="nav__logo">&lt;TZ /&gt;</span>
+
+            <div class="nav__links">
+                <a href="index.html">Home</a>
+                <a href="#poster">Poster</a>
+                <a href="#summary">Research Summary</a>
+            </div>
+        </nav>
+
+        <div class="hero__content">
+            <p class="hero__eyebrow">AI Research • Computer Vision • CPU-Only Deployment</p>
+
+            <h1 class="hero__name">AI Object Detection Research</h1>
+
+            <p class="hero__tagline">
+                Comparing object detection models for speed, memory, energy use, and real-world deployment on limited hardware.
+            </p>
+        </div>
+    </header>
+
+    <main>
+        <section id="summary" class="section">
+            <h2>Research Overview</h2>
+
+            <p>
+                This research explores how different object detection models perform under CPU-only conditions,
+                where hardware resources are limited. The goal is to understand which models are practical for
+                real-world deployment, especially in edge computing, robotics, and assistive technology.
+            </p>
+
+            <p>
+                The project compares lightweight and heavier detection models, including YOLOv8, SSD, RetinaNet,
+                Faster R-CNN, and DETR. Each model is evaluated based on runtime speed, memory usage, energy
+                consumption, and detection performance.
+            </p>
+        </section>
+
+        <section class="section">
+            <h2>Why This Matters</h2>
+
+            <p>
+                Many AI models perform well in controlled environments, but real devices often have limited power,
+                memory, and processing capacity. This research focuses on the practical side of AI: not only whether
+                a model is accurate, but whether it can run efficiently in real-world conditions.
+            </p>
+        </section>
+
+        <section class="section">
+            <h2>Key Focus Areas</h2>
+
+            <ul class="skills">
+                <li>Object Detection</li>
+                <li>Computer Vision</li>
+                <li>CPU-Only Inference</li>
+                <li>Energy Efficiency</li>
+                <li>Memory Usage</li>
+                <li>Model Benchmarking</li>
+                <li>YOLOv8</li>
+                <li>PyTorch</li>
+                <li>OpenCV</li>
+            </ul>
+        </section>
+
+        <section id="poster" class="section">
+            <h2>Research Poster</h2>
+
+            <p>
+                This poster summarizes the motivation, methodology, model comparison, results, and conclusions of the project.
+            </p>
+
+            <img class="research-poster"
+                 src="poster.jpg"
+                 alt="Research poster about AI object detection model performance and deployment">
+        </section>
+
+        <section class="section">
+            <h2>Conclusion</h2>
+
+            <p>
+                The research shows that choosing an AI model is not only about accuracy. For deployment on limited
+                hardware, speed, energy use, and memory footprint are just as important. Lightweight models such as
+                YOLOv8 can offer a strong balance between performance and efficiency, making them useful for practical
+                AI systems.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> Tinhinane Zadi. AI Object Detection Research.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

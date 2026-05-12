@@ -33,18 +33,33 @@ if (themeToggle) {
 
 const projects = [
     {
+        title: "CUNY Central Hackathon Project",
+        description:
+            "A smart student platform designed to help CUNY students plan classes, find internships, build resumes, and chat with an AI-powered advisor.",
+        link: "https://devpost.com/software/cuny-central",
+        tags: ["Hackathon", "AI", "Web App"],
+    },
+    {
+        title: "InfluenceFlow Hackathon Project",
+        description:
+            "An AI-powered marketing platform that helps small businesses automate campaigns, influencer outreach, analytics, and growth in one affordable system.",
+        link: "https://devpost.com/software/influenceflow?ref_content=user-portfolio&ref_feature=in_progress",
+        tags: ["Hackathon", "AI", "Marketing Tech"],
+    },
+    {
+        title: "AI Object Detection Research",
+        description:
+            "A research project comparing object detection models such as YOLOv8, SSD, RetinaNet, Faster R-CNN, and DETR for speed, memory, energy use, and CPU-only deployment.",
+        link: "research.html",
+        tags: ["AI", "Computer Vision", "Python"],
+},
+    {
         title: "Personal Portfolio",
         description:
-            "This very page — built from scratch using semantic HTML, CSS Grid + custom properties, and vanilla JavaScript. My first lab in the cohort.",
+            "A one-page portfolio built with semantic HTML, modern CSS, and vanilla JavaScript to showcase my growth as a developer.",
         link: "#",
         tags: ["HTML", "CSS", "JavaScript"],
     },
-    // {
-    //     title: "Next Project",
-    //     description: "Coming soon — I'll add the next thing I build right here.",
-    //     link: "https://github.com/yourusername/next-project",
-    //     tags: ["JavaScript"],
-    // },
 ];
 
 const grid = document.querySelector("#projects-grid");
@@ -73,6 +88,8 @@ if (grid) {
         link.className = "project-card__link";
         link.href = project.link;
         link.textContent = "View project →";
+        link.target = "_blank";
+        link.rel = "noopener";
 
         card.append(title, description, tagList, link);
         grid.appendChild(card);
